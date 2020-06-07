@@ -248,7 +248,7 @@ public class Request implements Serializable{
         try {
             connection.setRequestMethod(method);
             sendHeaders(headerToSend,connection);
-            connection.setRequestProperty("Content-Type", "application/json; utf-8");
+            connection.setRequestProperty("Content-Type", "application/json");
             connection.setRequestProperty("Accept", "application/json");
             connection.setDoOutput(true);
             bufferedOutputStream = new BufferedOutputStream(connection.getOutputStream());
